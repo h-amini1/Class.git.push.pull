@@ -1,0 +1,12 @@
+---
+- name: ls
+  hosts: localhost
+  tasks:
+  - name: command ls /tmp/
+    command: ls /tmp
+    register: result
+
+    
+  - name: print output the list command
+    debug:
+      var: result
